@@ -1,0 +1,55 @@
+version: '3.4'
+services:
+#  Optional
+#  nab-wealth-share:
+#    image: alfresco/alfresco-share:6.2.0
+#    environment:
+#      REPO_HOST: nab-wealth-acs
+#      REPO_PORT: 8080
+#    ports:
+#      - "8180:8080"
+  nab-wealth-acs:
+    image: alfresco-content-services-nab-wealth:development
+    build:
+      dockerfile: ./Dockerfile
+      context: ../../../target
+    environment:
+      CATALINA_OPTS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=0.0.0.0:8888"
+    ports:
+      - "8080:8080"
+      - "8888:8888"
+    volumes:
+      - nab-wealth-acs-volume:/usr/local/tomcat/alf_data
+    depends_on:
+      - nab-wealth-postgres
+  nab-wealth-postgres:
+    image: postgres:9.6
+    environment:
+      POSTGRES_DB: alfresco
+      POSTGRES_USER: alfresco
+      POSTGRES_PASSWORD: alfresco
+    command: postgres -c max_connections=300 -c log_min_messages=LOG
+    ports:
+      - "5555:5432"
+    volumes:
+      - nab-wealth-db-volume:/var/lib/postgresql/data
+  nab-wealth-ass:
+    image: alfresco/alfresco-search-services:1.2.0
+    environment:
+      SOLR_ALFRESCO_HOST: nab-wealth-acs
+      SOLR_ALFRESCO_PORT: 8080
+      SOLR_SOLR_HOST: nab-wealth-ass
+      SOLR_SOLR_PORT: 8983
+      SOLR_CREATE_ALFRESCO_DEFAULTS: alfresco,archive
+    ports:
+      - "8983:8983"
+    volumes:
+      - nab-wealth-ass-volume:/opt/alfresco-search-services/contentstore
+      - nab-wealth-ass-volume:/opt/alfresco-search-services/data
+volumes:
+  nab-wealth-acs-volume:
+    external: true
+  nab-wealth-db-volume:
+    external: true
+  nab-wealth-ass-volume:
+    external: true

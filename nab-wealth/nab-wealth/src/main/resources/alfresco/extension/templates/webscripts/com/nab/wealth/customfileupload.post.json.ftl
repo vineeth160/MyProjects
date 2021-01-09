@@ -1,0 +1,1 @@
+<#escape x as jsonUtils.encodeJSONString(x)>  {  "resultRepoWS": "${resultRepoWS}"  }  </#escape>

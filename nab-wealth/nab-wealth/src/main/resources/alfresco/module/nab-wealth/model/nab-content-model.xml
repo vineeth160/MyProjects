@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="nabw:nab_wealth">
+    <author>Demo User</author>
+    <imports>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.wealth.nab.com/model/bank/1.0" prefix="nabw"/>
+    </namespaces>
+    <data-types></data-types>
+    <constraints></constraints>
+    <types>
+        <type name="nabw:financialStatement">
+            <title>Financial Statement</title>
+            <description>Financial Statement Doc Type</description>
+            <parent>cm:content</parent>
+            <properties>
+                <property name="nabw:name">
+                    <title>Name</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:rdctAbn">
+                    <title>RDCT_ABN</title>                  
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:dateOfBirth">
+                    <title>Date Of Birth</title>
+                    <type>d:date</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="nabw:fundName">
+                    <title>FundName</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:trustName">
+                    <title>Trust Name</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+            </properties>
+            <associations/>
+            <overrides></overrides>
+            <mandatory-aspects></mandatory-aspects>
+        </type>
+        <type name="nabw:productConfirmation">
+            <title>Product Confirmation</title>
+            <description>Product Confirmation Document Type</description>
+            <parent>cm:content</parent>
+            <properties>
+                <property name="nabw:investorAccountName">
+                    <title>Investor Account Name</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:email">
+                    <title>Email</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:superServiceUSI">
+                    <title>Super Service USI</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:accountType">
+                    <title>Account Type</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:taxFileNumber">
+                    <title>Tax File Number</title>
+                    <type>d:int</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="nabw:dateOfSubmission">
+                    <title>Date Of Submission</title>
+                    <type>d:date</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="nabw:investorAccountNumber">
+                    <title>Investor Account Number</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:transactionType">
+                    <title>Transaction Type</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:totalPortfolioValue">
+                    <title>Total Portfolio Value</title>
+                    <type>d:long</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="nabw:advisorName">
+                    <title>Advisor Name</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:pensionServiceUSI">
+                    <title>Pension Service USI</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:transactionReceiptNumber">
+                    <title>Transaction Receipt Number</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:investorAddress">
+                    <title> Investor Address</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+                <property name="nabw:investorNumber">
+                    <title>Investor Number</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                        <facetable>false</facetable>
+                    </index>
+                </property>
+            </properties>
+            <associations/>
+            <overrides></overrides>
+            <mandatory-aspects></mandatory-aspects>
+        </type>
+    </types>
+    <aspects></aspects>
+</model>

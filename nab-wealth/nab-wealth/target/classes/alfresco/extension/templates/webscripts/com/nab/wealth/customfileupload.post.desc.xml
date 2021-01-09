@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>File Upload</shortname>
+   <description>Upload files to user home</description>
+   <url>/upload/fileupload.json</url>
+   <format default="json"/>
+   <authentication runas="admin">guest</authentication>
+   <transaction>required</transaction>
+</webscript>
