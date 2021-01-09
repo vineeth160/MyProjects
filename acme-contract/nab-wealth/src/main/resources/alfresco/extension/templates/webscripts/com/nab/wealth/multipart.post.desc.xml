@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Multipart Services</shortname>
+    <description>This Web Script is used to test the Multipart Services API</description>
+    <url>/sample/multipart</url>
+    <authentication>user</authentication>
+    <format default="json"></format>
+	 <transaction>required</transaction>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Search Services</shortname>
+    <description>This Web Script is used to test the Search Services API</description>
+    <url>/sample/search</url>
+    <authentication>user</authentication>
+    <format default="json"></format>
+	 <transaction>required</transaction>
+</webscript>
